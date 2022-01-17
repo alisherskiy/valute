@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    background: #ffffff;
+    color: whitesmoke;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20pt;
+  }
+  
+  /* Header */
+  
+  .header {
+    background: goldenrod;
+    padding: 7pt 0;
+  }
+  
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__inner h2 {
+    font-size: 1.7rem;
+  }
+  
+  .header__inner h2 span {
+    color: #ffffff;
+  }
+  
+  .header__inner h4 {
+    font-size: 1.1rem;
+  }
+  
+  /* Main */
+  
+  .main {
+    max-width: 650px;
+    width: 100%;
+    margin: 20pt auto;
+  }
+  
+  .main__add--task {
+    width: 100%;
+    display: flex;
+  }
+  
+  .main__add--task__inp {
+    width: 85%;
+    padding-top: 7pt;
+    padding-bottom: 7pt;
+    padding-left: 8pt;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    background: #e7e0e0 ;
+    border: none;
+    outline: none;
+    color: #312e2e;
+    border-bottom: 1px solid #312e2e;
+    font-size: 1.1rem;
+    transition: .8s all ease-in;
+    border-radius: 5px;
+  }
+  
+  .main__add--task__inp:hover {
+    border-bottom: 1px solid goldenrod;
+  }
+  
+  .main__add--task__btn {
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    padding-left: 3pt;
+    padding-right: 3pt;
+    cursor: pointer;
+    margin-left: 3.5pt;
+    width: 100px;
+    border: none;
+    background: goldenrod;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .main__add--task__btn.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .main__add--task__btn:hover {
+    background: goldenrod;
+  }
+  
+  .modal {
+    position: absolute;
+    width: 300px;
+    padding-top: 5pt;
+    background: #e7e0e0;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    top: 80px;
+    right: 7.5px;
+    display: none;
+  }
+  
+  .modal__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+  }
+  
+
+  
+  .modal__item h4 {
+    color: #312e2e;
+    font-weight: 500;
+  }
+  
+  
+  .modal__footer {
+    width: 100%;
+    height: 15px;
+    background: rgb(80, 219, 67);
+    border-radius: 5px;
+    padding-bottom: 10px;
+  }
+  
+  .active {
+    display: block;
+  }
+
+
+  .todo__list {
+    margin-top: 15pt;
+  }
+  .todo__list li {
+    list-style: none;
+    background: #f2f2f2;
+    color: #312e2e;
+    display: flex;
+    justify-content: space-between;
+    padding: 10pt 15pt;
+    margin-bottom: 5pt;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .todo__list li  span {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .todo__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 15pt;
+  }
+
+  .todo__footer p {
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+
+  .todo__footer button {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    background: goldenrod;
+    padding-top: 8pt;
+    padding-bottom: 8pt;
+    padding-left: 3pt;
+    padding-right: 3pt;
+    width: 100px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    pointer-events: none;
+    opacity: .6;
+  }
+
+  .todo__footer button.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .todo__footer button:hover {
+    background: rgb(70, 116, 156);
+  }
